@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CoinTracker/static/css/main.6670a853.chunk.css",
+    "main.js": "/CoinTracker/static/js/main.699cd890.chunk.js",
+    "main.js.map": "/CoinTracker/static/js/main.699cd890.chunk.js.map",
+    "runtime-main.js": "/CoinTracker/static/js/runtime-main.5e460500.js",
+    "runtime-main.js.map": "/CoinTracker/static/js/runtime-main.5e460500.js.map",
+    "static/js/2.8cca74d2.chunk.js": "/CoinTracker/static/js/2.8cca74d2.chunk.js",
+    "static/js/2.8cca74d2.chunk.js.map": "/CoinTracker/static/js/2.8cca74d2.chunk.js.map",
+    "index.html": "/CoinTracker/index.html",
+    "static/css/main.6670a853.chunk.css.map": "/CoinTracker/static/css/main.6670a853.chunk.css.map",
+    "static/js/2.8cca74d2.chunk.js.LICENSE.txt": "/CoinTracker/static/js/2.8cca74d2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e460500.js",
+    "static/js/2.8cca74d2.chunk.js",
+    "static/css/main.6670a853.chunk.css",
+    "static/js/main.699cd890.chunk.js"
+  ]
+}
