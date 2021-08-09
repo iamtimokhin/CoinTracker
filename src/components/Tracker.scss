@@ -1,0 +1,121 @@
+h1 {
+    font-size: 2.2em;
+}
+
+.coin--warapper {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .coin__text {
+        padding: 10px;
+    }
+
+    .flip {
+        --border-width: 3px;
+        background-color: rgb(44, 44, 44);
+        padding: 10px;
+        border-radius: 6px;
+        position: relative;
+        width: 30%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: var(--border-width);
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: calc(-1 * var(--border-width));
+            left: calc(-1 * var(--border-width));
+            z-index: -1;
+            width: calc(100% + var(--border-width) * 2);
+            height: calc(100% + var(--border-width) * 2);
+            background: linear-gradient(60deg,
+                    hsl(224, 85%, 66%),
+                    hsl(269, 85%, 66%),
+                    hsl(314, 85%, 66%),
+                    hsl(359, 85%, 66%),
+                    hsl(44, 85%, 66%),
+                    hsl(89, 85%, 66%),
+                    hsl(134, 85%, 66%),
+                    hsl(179, 85%, 66%));
+            background-size: 300% 300%;
+            background-position: 0 50%;
+            border-radius: calc(2 * var(--border-width));
+            animation: moveGradient 4s alternate infinite;
+        }
+
+        .front {
+            .front__image {
+                padding-top: 20px;
+                height: 100px;
+            }
+        }
+
+
+
+        >.front,
+        >.back {
+            border-radius: 6px;
+            display: block;
+            transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+            transition-duration: .5s;
+            transition-property: transform, opacity;
+        }
+
+        >.front {
+
+            transform: rotateY(0deg);
+
+        }
+
+        >.back {
+
+            background-color: rgb(44, 44, 44);
+            position: absolute;
+            opacity: 0;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            transform: rotateY(-180deg);
+        }
+
+        &:hover {
+            >.front {
+                transform: rotateY(180deg);
+            }
+
+            >.back {
+                opacity: 1;
+                transform: rotateY(0deg);
+            }
+        }
+
+    }
+}
+
+.text-shadow {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+}
+
+.loading__more {
+    width: 30%;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgb(44, 44, 44);
+    color: rgb(99, 98, 98);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.0125);
+    }
+
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
